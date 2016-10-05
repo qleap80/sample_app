@@ -5,6 +5,10 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html') #The file should be located in the same folder
 
+@app.route('/about')
+def about():
+	return render_template('about.html')
+
 app.run(debug=True) #Debug mode. Do not need to restart the server for debugging
 
 
